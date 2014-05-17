@@ -13,11 +13,11 @@ class Bowling(object):
             first_roll = self.rolls[counter]
             second_roll = self.rolls[counter+1]
             
-            if self.is_strike(first_roll):
+            if self.__is_strike(first_roll):
                 third_roll = self.rolls[counter+2]
                 score += first_roll + second_roll + third_roll
                 counter += 1
-            elif self.is_spare(first_roll, second_roll):
+            elif self.__is_spare(first_roll, second_roll):
                 third_roll = self.rolls[counter+2]
                 score += first_roll + second_roll + third_roll
                 counter += 2
@@ -27,12 +27,12 @@ class Bowling(object):
 
         return score
     
-    def is_strike(self, first):
+    def __is_strike(self, first):
         if first == 10:
             return 1
         return 0
     
-    def is_spare(self, first, second):
-        if self.is_strike(first) or first + second != 10:
+    def __is_spare(self, first, second):
+        if self.__is_strike(first) or first + second != 10:
             return 0
         return 1
