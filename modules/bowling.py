@@ -33,6 +33,6 @@ class Bowling(object):
         return 0
     
     def __is_spare(self, first, second):
-        if self.__is_strike(first) or first + second != 10:
-            return 0
-        return 1
+        if not self.__is_strike(first) and first + second == 10:
+            return 1
+        return 0
