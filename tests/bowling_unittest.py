@@ -39,7 +39,7 @@ class TestSequenceFunctions(unittest.TestCase):
         g.roll(3)
         self.roll_many(17, 0)
         self.assertEquals(20, g.calculate_score(), 'one strike game 20 points')
-        
+
     def test_perfect_game(self):
         g = self.game
         self.roll_many(12, 10)
