@@ -9,7 +9,9 @@ sys.path.append(findbin + "/../modules")
 
 from bowling import Bowling
 
+
 class TestSequenceFunctions(unittest.TestCase):
+
     def setUp(self):
         self.game = Bowling()
 
