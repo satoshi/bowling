@@ -1,4 +1,0 @@
----
-language: python
-install: /bin/true
-script: python tests/bowling_unittest.py
