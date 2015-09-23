@@ -1,3 +1,6 @@
+from bowling.frame import BowlingFrame
+
+
 class BowlingGame(object):
 
     def __init__(self):
@@ -14,16 +17,13 @@ class BowlingGame(object):
             first_roll = self.rolls[index]
             second_roll = self.rolls[index + 1]
 
-            if first_roll == 10:
+            try:
                 third_roll = self.rolls[index + 2]
-                score += first_roll + second_roll + third_roll
-                index += 1
-            elif first_roll + second_roll == 10:
-                third_roll = self.rolls[index + 2]
-                score += first_roll + second_roll + third_roll
-                index += 2
-            else:
-                score += first_roll + second_roll
-                index += 2
+                f = BowlingFrame([first_roll, second_roll, third_roll])
+            except IndexError:
+                f = BowlingFrame([first_roll, second_roll])
+
+            score += f.calculate_score()
+            index += f.calculate_offset()
 
         return score
