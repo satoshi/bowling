@@ -9,4 +9,5 @@ setup(
     author_email='satoshi.yagi@yahoo.com',
     license='MIT',
     long_description='bowling score calculator with refactoring',
+    packages=find_packages(exclude=['tests']),
 )
