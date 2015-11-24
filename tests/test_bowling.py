@@ -45,6 +45,3 @@ class TestBowlingGame(unittest.TestCase):
         g = self.game
         for i in range(rolls):
             g.roll(pins)
-
-if __name__ == '__main__':
-    unittest.main()
