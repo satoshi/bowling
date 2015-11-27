@@ -20,6 +20,3 @@ class TestBowlingFrame(unittest.TestCase):
         f = BowlingFrame([10, 3, 6])
         self.assertEquals(f.calculate_score(), 19, 'got 19 for the frame')
         self.assertEquals(f.calculate_offset(), 1, 'got 1 for offset')
-
-if __name__ == '__main__':
-    unittest.main()
