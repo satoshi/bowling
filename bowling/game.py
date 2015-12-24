@@ -1,7 +1,7 @@
 from bowling.frame import BowlingFrame
 
 
-class BowlingGame:
+class BowlingGame(object):
 
     def __init__(self):
         self.rolls = list()

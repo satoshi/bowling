@@ -1,4 +1,4 @@
-class BowlingFrame:
+class BowlingFrame(object):
 
     def __init__(self, rolls):
         self.rolls = rolls
