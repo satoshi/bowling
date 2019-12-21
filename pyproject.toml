@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bowling"
+version = "0.0.4"
+description = ""
+authors = ["Satoshi Yagi <satoshi.yagi@yahoo.com>"]
+
+[tool.poetry.dependencies]
+python = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
